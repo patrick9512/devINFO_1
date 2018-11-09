@@ -15,7 +15,7 @@ namespace DevInfo.ViewModels
 {
     class DevInfoViewModel
     {
-        public ObservableCollection<User> Users => LoadUsers();
+        public ObservableCollection<User> Users { get; set; }
 
         public User SelectedUser { get; set; }
 
@@ -25,19 +25,20 @@ namespace DevInfo.ViewModels
         public ICommand SaveCommand { get; set;  }
         public ICommand CreateCommand { get; set;  }
 
+        public string name { get; set; }
+        public string lastName { get; set; } 
+
         public DevInfoViewModel()   
         {
+            Users = LoadUsers();
             SaveCommand = new RelayCommand(SaveUsers);
             CreateCommand = new RelayCommand(CreateUser);
         }
 
         public void CreateUser(object obj)
         {
-            string txtName, txtlastName;
-            
-            User newUser = new User(txtName, txtlastName, 0);
-
-
+            User newuser = new User(name, lastName, 0);
+            Users.Add(newuser);
         }
 
         private void SaveUsers(object obj)

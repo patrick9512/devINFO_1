@@ -1,17 +1,17 @@
 [
   {
     "Name": "Patryk",
-    "LastName": "Chelber",
+    "LastName": "Cha",
     "NvrCount": 1
   },
   {
-    "Name": "Piotr",
-    "LastName": "Kaczan",
+    "Name": "Pioter",
+    "LastName": "Ka",
     "NvrCount": 9
   },
   {
     "Name": "Zbychu",
     "LastName": "Zpopychu",
     "NvrCount": 777
-  }
+  },
 ]

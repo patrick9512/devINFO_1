@@ -14,8 +14,9 @@
         <StackPanel>
             <DataGrid ItemsSource="{Binding Users}" AutoGenerateColumns="True" CanUserResizeColumns="False" CanUserAddRows="False" IsReadOnly="True"></DataGrid>
             <Button Content="Save" Width="100" Command="{Binding SaveCommand}"  ></Button>
-            <TextBox x:Name="txtName" Text="{Binding txtName, Mode=TwoWay}"  Width="100"></TextBox>
-            <TextBox x:Name="txtlastName" Text ="{Binding txtlastName, Mode=TwoWay}" Width="100"></TextBox>
+            <TextBox x:Name="txtName" Text="{Binding name, Mode=TwoWay}"  Width="100"></TextBox>
+            <TextBox x:Name="txtlastName" Text ="{Binding lastName, Mode=TwoWay}" Width="100"></TextBox>
+            <Button Content="CreateUser" Width="100" Command="{Binding CreateCommand}"> </Button>
         </StackPanel>
     </Grid>
 </Window>
